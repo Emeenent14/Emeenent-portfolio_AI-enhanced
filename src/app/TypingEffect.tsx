@@ -21,7 +21,7 @@ const TypingEffect = ({ text }: TypingEffectProps) => {
           setDisplayedText('');
           index = 0;
           setTimeout(typeText, speed);
-        }, 10000); // delay before restarting
+        }, 100000); // delay before restarting
       }
     };
     typeText();
