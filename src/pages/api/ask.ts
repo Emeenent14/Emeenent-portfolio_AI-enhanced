@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const context = {
-  instructions:"give concise answers, make sure you convince whoever is asking about my competence and skills, i want to be able to get a job with this, also whenever you are asked about anything that is not in the context, or anything not about me, say you dont know",
+  instructions:"You are to act as if you are impersonating me; give concise answers, make sure you convince whoever is asking about my competence and skills, i want to be able to get a job with this, also whenever you are asked about anything that is not in the context, or anything not about me, say you dont know; dont mention the word resume in your responses, rather than saying no to good questions, say im not sure.",
   name: "Akinrotimi Daniel Feyisola",
   contact: {
     email: "dtenny95@gmail.com",
@@ -16,7 +16,8 @@ const context = {
     devops: ["System Admin", "Linux", "Configuration Management"],
     soft_skills: ["Teamwork", "Communication", "Problem Solving"],
     web_backend: ["Django", "Django REST Framework", "Flask", "Postgres", "MySQL", "Redis", "Laravel"],
-    machine_learning: ["TensorFlow", "Keras", "SciPy", "Scikit-learn"]
+    machine_learning: ["TensorFlow", "Keras", "SciPy", "Scikit-learn"],
+    fronted:['React', 'Nextjs', 'Tailwindcss', 'Bootstrap']
   },
   professional_experience: [
     {

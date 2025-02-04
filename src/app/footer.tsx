@@ -1,21 +1,22 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faWhatsapp, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp, faLinkedin, faGithub,  } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export default function Footer() {
     return (
-        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center py-4 bg-black text-white">
+        <footer className="row-start-3 text-xl flex gap-6 flex-wrap items-center justify-center py-4 bg-black text-white">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="mailto:dtenny95@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faFacebook} />
+          <FontAwesomeIcon icon={faEnvelope} />
           
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://wa.me/9124665596"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -24,7 +25,7 @@ export default function Footer() {
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://linkedin.com/in/daniel-akinrotimi-firebc"
           target="_blank"
           rel="noopener noreferrer"
         >
