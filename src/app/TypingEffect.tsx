@@ -34,7 +34,7 @@ const TypingEffect = ({ text }: TypingEffectProps) => {
   return (
     <span className="relative">
       {displayedText}
-      <span className=" -right-1 top-0 animate-blink bg-green-500  text-green-500 text-4xl font-bold" >|</span>
+      <span className=" -right-1 top-0 animate-blink bg-green-500  text-green-500 text-xl md:text-4xl font-bold" >|</span>
     </span>
   );
 };

@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const context = {
+  instructions:"give concise answers, make sure you convince whoever is asking about my competence and skills, i want to be able to get a job with this, also whenever you are asked about anything that is not in the context, or anything not about me, say you dont know",
   name: "Akinrotimi Daniel Feyisola",
   contact: {
     email: "dtenny95@gmail.com",
@@ -19,9 +20,10 @@ const context = {
   },
   professional_experience: [
     {
-      role: "Backend Development Intern",
+      role: "Sotware Engineer",
       company: "Glintplus",
       duration: "May 2024 - January 2025",
+      type:"part-time/remote",
       responsibilities: [
         "Built the researchment app platform API and the researchment academy API",
         "Handled DevOps and configuration management of web servers and services"
@@ -106,18 +108,30 @@ const context = {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { question } = req.body;
 
-  const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      contents: [{
-        parts: [{ text: `${JSON.stringify(context)} ${question}` }]
-      }]
-    }),
-  });
+  try {
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        contents: [{
+          parts: [{ text: `${JSON.stringify(context)} ${question}` }]
+        }]
+      }),
+    });
 
-  const data = await response.json();
-  res.status(200).json({ answer: data.contents[0].parts[0].text });
+    const data = await response.json();
+    // console.log('Gemini API response:', data);
+
+    if (data.candidates && data.candidates[0] && data.candidates[0].content) {
+      res.status(200).json({ answer: data.candidates[0].content.parts[0].text });
+      console.log('Gemini API response:', data.candidates[0].content.parts[0].text);
+    } else {
+      res.status(500).json({ error: 'Invalid response from API' });
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 }
