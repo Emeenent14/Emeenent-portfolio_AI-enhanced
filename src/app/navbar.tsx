@@ -29,21 +29,21 @@ export default function Navbar() {
             
             <div className="container p-10  mx-auto flex justify-between items-center">
                 <Link href="/" className="text-4xl font-bold">
-                    Daniel A F.
+                    <span className="text-green-500">{'{'}</span> Daniel A. F. <span className="text-green-500">{'}'}</span>
                 </Link>
                 <ul className="flex gap-6 ">
                 <li>
-                    <Link href="#about" className="relative  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-1 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+                    <Link href="#about" className="relative  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">
                         <p className='text-2xl'>About</p>
                     </Link>
                 </li>
                 <li>
-                    <Link href="#projects" className="relative  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-1 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+                    <Link href="#projects" className="relative  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-green-300 after:transition-all after:duration-300 hover:after:w-full">
                         <p className='text-2xl'>Projects</p>
                     </Link>
                 </li>
                 <li>
-                        <Link href="#contact" className="relative  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-1 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+                        <Link href="#contact" className="relative  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">
                             <p className='text-2xl'>Contact</p>
                     </Link>
                 </li>

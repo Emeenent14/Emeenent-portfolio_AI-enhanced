@@ -23,11 +23,16 @@ body {
 }
 
 @keyframes blink {
-  50% {
-    opacity: 0;
-  }
+  0%,
+    100% {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 0;
+    }
 }
 
 .animate-blink {
-  animation: blink 0.7s infinite step-end;
+  animation: blink 0.7s infinite step-start;
 }

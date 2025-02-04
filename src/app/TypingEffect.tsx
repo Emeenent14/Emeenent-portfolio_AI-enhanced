@@ -8,21 +8,35 @@ interface TypingEffectProps {
 const TypingEffect = ({ text }: TypingEffectProps) => {
   const [displayedText, setDisplayedText] = useState('');
   const speed = 100; // typing speed in ms
-  
+
   useEffect(() => {
     let index = 0;
-    const intervalId = setInterval(() => {
-      setDisplayedText((prev) => prev + text[index]);
-      index += 1;
-      if (index === text.length) {
-        clearInterval(intervalId);
+    const typeText = () => {
+      if (index < text.length) {
+        setDisplayedText((prev) => prev.concat(text.charAt(index)));
+        index += 1;
+        setTimeout(typeText, speed);
+      } else {
+        setTimeout(() => {
+          setDisplayedText('');
+          index = 0;
+          setTimeout(typeText, speed);
+        }, 10000); // delay before restarting
       }
-    }, speed);
-    
-    return () => clearInterval(intervalId);
+    };
+    typeText();
+
+    return () => {
+      setDisplayedText('');
+    };
   }, [text]);
 
-  return <span className="relative">{displayedText}<span className="absolute right-0 top-0 animate-blink">|</span></span>;
+  return (
+    <span className="relative">
+      {displayedText}
+      <span className=" -right-1 top-0 animate-blink bg-green-500  text-green-500 text-4xl font-bold" >|</span>
+    </span>
+  );
 };
 
 export default TypingEffect;
