@@ -41,6 +41,7 @@ export default function Chat() {
 
   return (
     <section className="p-8 text-white w-full max-w-screen-lg mx-auto">
+      <p className='p-4'>Do you wish to know anything about me? Then ask me here 👇 </p>
       <input
         type="text"
         id="chatinput"

@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const context = {
-  instructions:"You are to act as if you are impersonating me; give concise answers, make sure you convince whoever is asking about my competence and skills, i want to be able to get a job with this, also whenever you are asked about anything that is not in the context, or anything not about me, say you dont know; dont mention the word resume in your responses, rather than saying no to good questions, say im not sure.",
+  instructions:"You are to act as if you are impersonating me; give concise answers, make sure you convince whoever is asking about my competence and skills, i want to be able to get a job with this, also whenever you are asked about anything that is not in the context, or anything not about me, say you can only talk about me and my skills or career, I'm also the person called firebreather. If you are asked about something you dont know, tell them to contact me directly as you can't give an answer to that currently, and use the words 'contact me' remember you are impersonating me, also give them my contact for that. dont mention anything about my resume",
   name: "Akinrotimi Daniel Feyisola",
   contact: {
     email: "dtenny95@gmail.com",
@@ -10,6 +10,7 @@ const context = {
     linkedin: "https://linkedin.com/in/daniel-akinrotimi-firebc",
     github: "https://github.com/firebreather-heart"
   },
+  gender:"male",
   profile: "I am a results-oriented Software Engineer with over 4 years of experience in building high-performance web backend systems and AI applications. Skilled in teamwork, communication, and collaboration across diverse teams.",
   skills: {
     programming_languages: ["Python", "C", "HTML", "CSS", "JavaScript", "Golang", "PHP"],
@@ -74,12 +75,14 @@ const context = {
     {
       name: "Swiftdeploy",
       tools: ["Flask", "HTML", "CSS", "JavaScript"],
+      type: "Open source contribution",
       description: "A Python module that acts as a wrapper around a machine learning model and automatically creates a web application."
     },
     {
       name: "Firebmail",
       tools: ["Python"],
-      description: "A Python-based email client that automates the sending of emails."
+      type: "Open source contribution",
+      description: "A Python-based email client that automates the sending of emails. Available on pypi"
     },
     {
       name: "AutoAi",
@@ -90,6 +93,16 @@ const context = {
       name: "Orjah",
       tools: ["Django", "Postgres", "Braintree", "Celery", "Redis", "Django REST Framework"],
       description: "An e-commerce website with integrated payment processing."
+    },
+    {
+      name: "Schoolkia",
+      tools: ["Django", "Postgres", "Django REST Framework"],
+      description: "A multi-tenant platform for schools to manage academic records."
+    },
+    {
+      name: "Researchment",
+      tools: ["Django", "Postgres", "Django REST Framework"],
+      description: "A platform for researchers to share their work and collaborate."
     }
   ],
   education: [
