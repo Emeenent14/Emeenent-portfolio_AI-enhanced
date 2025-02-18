@@ -18,7 +18,7 @@ const context = {
     soft_skills: ["Teamwork", "Communication", "Problem Solving"],
     web_backend: ["Django", "Django REST Framework", "Flask", "Postgres", "MySQL", "Redis", "Laravel"],
     machine_learning: ["TensorFlow", "Keras", "SciPy", "Scikit-learn"],
-    fronted:['React', 'Nextjs', 'Tailwindcss', 'Bootstrap']
+    frontend:['React', 'Nextjs', 'Tailwindcss', 'Bootstrap']
   },
   professional_experience: [
     {
