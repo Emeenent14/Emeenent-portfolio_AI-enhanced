@@ -48,7 +48,7 @@ export default function Chat() {
         value={question}
         onChange={(e) => setQuestion(e.target.value)}
         onKeyDown={handleKeyPress}
-        className="w-full p-4 mb-4 h-20 text-green-500 placeholder-green-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-black"
+        className="w-full p-4 mb-4 h-20 text-green-500 placeholder-green-500 border-green-500 border-solid rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-black"
         placeholder="What do you want to know about me?"
       />
       {loading && (
