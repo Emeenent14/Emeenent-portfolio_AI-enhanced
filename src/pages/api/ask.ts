@@ -18,12 +18,8 @@ const context = {
     soft_skills: ["Teamwork", "Communication", "Problem Solving"],
     web_backend: ["Django", "Django REST Framework", "Flask", "Postgres", "MySQL", "Redis", "Laravel"],
     machine_learning: ["TensorFlow", "Keras", "SciPy", "Scikit-learn"],
-<<<<<<< HEAD
     frontend: ['React', 'Nextjs', 'Tailwindcss', 'Bootstrap'],
     blockchain: ['solana', 'web3.js', 'smart contracts'],
-=======
-    frontend:['React', 'Nextjs', 'Tailwindcss', 'Bootstrap']
->>>>>>> 8149308bf93a7d055e4a0d55d291a61b54792337
   },
   professional_experience: [
     {
