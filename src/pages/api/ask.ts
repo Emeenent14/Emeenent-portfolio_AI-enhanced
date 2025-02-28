@@ -11,14 +11,15 @@ const context = {
     github: "https://github.com/firebreather-heart"
   },
   gender:"male",
-  profile: "I am a results-oriented Software Engineer with over 4 years of experience in building high-performance web backend systems and AI applications. Skilled in teamwork, communication, and collaboration across diverse teams.",
+  profile: "I am a results-oriented Software Engineer with over 4 years of experience in building high-performance web2 and web3 systems and AI applications. Skilled in teamwork, communication, and collaboration across diverse teams.",
   skills: {
     programming_languages: ["Python", "C", "HTML", "CSS", "JavaScript", "Golang", "PHP"],
     devops: ["System Admin", "Linux", "Configuration Management"],
     soft_skills: ["Teamwork", "Communication", "Problem Solving"],
     web_backend: ["Django", "Django REST Framework", "Flask", "Postgres", "MySQL", "Redis", "Laravel"],
     machine_learning: ["TensorFlow", "Keras", "SciPy", "Scikit-learn"],
-    fronted:['React', 'Nextjs', 'Tailwindcss', 'Bootstrap']
+    frontend: ['React', 'Nextjs', 'Tailwindcss', 'Bootstrap'],
+    blockchain: ['solana', 'web3.js', 'smart contracts'],
   },
   professional_experience: [
     {
