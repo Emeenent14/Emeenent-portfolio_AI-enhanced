@@ -30,7 +30,7 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ease-in-out bg-black text-white shadow-md p-4 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         <Link href="/" className="text-4xl font-bold h-full flex items-center mb-4 md:mb-0">
-          <span className="text-green-500">{'{'}</span> Daniel A. F. <span className="text-green-500">{'}'}</span>
+          <span className="text-green-500">{'{'}</span> Chukwuemeka Franklin<span className="text-green-500">{'}'}</span>
         </Link>
         <div className="flex gap-6">
           <Link href="#about" className="relative group">
