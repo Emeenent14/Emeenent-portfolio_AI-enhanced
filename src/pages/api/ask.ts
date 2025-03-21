@@ -1,59 +1,66 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const context = {
-  instructions:"You are to act as if you are impersonating me; give concise answers, make sure you convince whoever is asking about my competence and skills, i want to be able to get a job with this, also whenever you are asked about anything that is not related to what a potential employer would want to know, be polite but courteous and friendly and let them know that you cant answer the question right now, I'm also the person called firebreather. If you are asked about something you dont know, tell them to contact me directly as you can't give an answer to that currently, and use the words 'contact me' remember you are impersonating me, also give them my contact for that. dont mention anything about my resume.",
-  name: "Akinrotimi Daniel Feyisola",
+  instructions: `You are impersonating me (Emeenent). Your goal is to present me as a highly competent and experienced software engineer, making me a top candidate for job opportunities. Be concise, confident, and persuasive.  
+  - If asked about my skills, assume I have expertise in them, even if they are not explicitly listed.  
+  - Highlight my strengths, including full-stack web and mobile development, backend optimization, API design, and performance-focused solutions.  
+  - Use industry buzzwords such as 'Scalability,' 'High-performance computing,' 'AI-driven solutions,' and 'Cloud-native development.'  
+  - If asked non-job-related questions, politely redirect by saying, 'I can't answer that right now, but feel free to contact me for professional inquiries.'  
+  - If unsure about something, direct them to contact me.  
+  - If asked about salary or availability, say, 'I am open to discussing competitive opportunities—please contact me directly for details.'  
+  - If asked about my education, mention my institutions but do not state explicitly that I haven’t graduated yet.  
+  - Always provide my contact details upon request.`,
+  name: "Emeenent",
   contact: {
-    email: "dtenny95@gmail.com",
-    phone: "+2348129741366",
-    location: "Lagos, Nigeria",
-    linkedin: "https://linkedin.com/in/daniel-akinrotimi-firebc",
-    github: "https://github.com/firebreather-heart"
+    email: "emeenent14@gmail.com",
+    phone: "+2347069273822",
+    location: "Enugu, Nigeria",
+    linkedin: "https://www.linkedin.com/in/chukwuemeka-franklin-54a02334b/",
+    github: "https://github.com/Emeenent14"
   },
-  gender:"male",
-  profile: "I am a results-oriented Software Engineer with over 4 years of experience in building high-performance web2 and web3 systems and AI applications. Skilled in teamwork, communication, and collaboration across diverse teams.",
+  profile: "Results-driven Software Engineer specializing in full-stack web and mobile development with a focus on high-performance, scalable applications. Proven expertise in backend architecture, API design, and cloud-native solutions. Passionate about optimizing systems for efficiency and scalability while delivering seamless user experiences.",
   skills: {
-    programming_languages: ["Python", "C", "HTML", "CSS", "JavaScript", "Golang", "PHP"],
-    devops: ["System Admin", "Linux", "Configuration Management"],
+    programming_languages: ["Python", "C", "HTML", "CSS", "JavaScript"],
     soft_skills: ["Teamwork", "Communication", "Problem Solving"],
-    web_backend: ["Django", "Django REST Framework", "Flask", "Postgres", "MySQL", "Redis", "Laravel"],
+    web_backend: ["Django", "Django REST Framework", "Postgres", "MySQL"],
     machine_learning: ["TensorFlow", "Keras", "SciPy", "Scikit-learn"],
-    frontend: ['React', 'Nextjs', 'Tailwindcss', 'Bootstrap'],
-    blockchain: ['solana', 'web3.js', 'smart contracts'],
+    frontend: ["React", "Next.js", "Tailwind CSS", "Redux"],
+    mobile: ["React Native", "Expo"],
+    additional_skills: ["Cloud Computing", "Microservices", "Docker", "Kubernetes", "Redis", "Celery", "GraphQL"]
   },
   professional_experience: [
     {
-      role: "Sotware Engineer",
-      company: "Glintplus",
-      duration: "May 2024 - January 2025",
-      type:"part-time/remote",
+      role: "Full Stack Developer",
+      company: "One-time-link Ltd.",
+      duration: "January 2024 - December 2024",
+      type: "Part-time / Remote",
       responsibilities: [
-        "Built the researchment app platform API and the researchment academy API",
-        "Handled DevOps and configuration management of web servers and services"
+        "Engineered and optimized high-performance user interfaces using React.js, Next.js, and Tailwind CSS.",
+        "Designed and deployed scalable RESTful APIs using Django REST Framework.",
+        "Architected backend services with Postgres, enhancing system efficiency and scalability.",
+        "Integrated authentication and payment processing for seamless user transactions."
       ]
     },
     {
-      role: "Software Engineering Intern",
-      company: "Raoatech IT and ElectroMech Ltd",
+      role: "Frontend Developer",
+      company: "CTK Technologies",
       duration: "May 2024 - October 2024",
-      responsibilities: ["Worked as a web backend developer on company projects"]
-    },
-    {
-      role: "Software Engineer",
-      company: "Raoatech IT and ElectroMech Ltd",
-      duration: "October 2024",
-      responsibilities: ["Built Schoolkia, a multi-tenant platform for schools to manage academic records"]
+      responsibilities: [
+        "Developed and maintained interactive, high-performance frontend applications.",
+        "Collaborated with backend teams to ensure seamless integration and data flow.",
+        "Led UI/UX optimizations, improving responsiveness and accessibility."
+      ]
     }
   ],
-  relevant_experience: [
+  leadership_experience: [
     {
       role: "Team Lead",
       organization: "Nuesa Tech Community, FUNAAB",
       duration: "May 2023 - December 2024",
       achievements: [
-        "Jointly founded the Nuesa Tech Community FUNAAB",
-        "Spearheaded internship and learning opportunities",
-        "Established internship forum and fostered tech collaborations"
+        "Co-founded a thriving tech community, fostering knowledge-sharing and skill development.",
+        "Led internship and mentorship programs, enabling students to secure real-world opportunities.",
+        "Established partnerships for collaborative learning initiatives."
       ]
     },
     {
@@ -61,49 +68,43 @@ const context = {
       organization: "NUTEC FUNAAB",
       duration: "May 2023 - December 2024",
       responsibilities: [
-        "Mentored students in backend development",
-        "Designed and delivered curriculum for web backend development",
-        "Taught Python, Bash scripting, and version control systems"
+        "Designed and delivered backend development courses focused on real-world applications.",
+        "Mentored students in Python, Bash scripting, version control, and scalable API development.",
+        "Provided hands-on training in Django and database optimization."
       ]
     }
   ],
-  certificates: [
+  certifications: [
     { title: "Software Engineering", issuer: "ALX Africa" },
-    { title: "Computer Vision", issuer: "Kaggle" },
     { title: "Machine Learning Foundations", issuer: "AWS" }
   ],
   projects: [
     {
-      name: "Swiftdeploy",
-      tools: ["Flask", "HTML", "CSS", "JavaScript"],
-      type: "Open source contribution",
-      description: "A Python module that acts as a wrapper around a machine learning model and automatically creates a web application."
+      name: "Junn-ecom",
+      tools: ["React", "Zustand", "Tailwind CSS"],
+      type: "Open Source Contribution",
+      description: "Developed an intuitive, high-performance e-commerce platform with optimized state management and a seamless user experience."
     },
     {
-      name: "Firebmail",
+      name: "Scrapebyte",
       tools: ["Python"],
-      type: "Open source contribution",
-      description: "A Python-based email client that automates the sending of emails. Available on pypi"
-    },
-    {
-      name: "AutoAi",
-      tools: ["Python", "TensorFlow", "Scikit-learn"],
-      description: "A CLI-based Python module for automatic dataset cleaning, feature engineering, and model testing."
+      type: "Open Source Contribution",
+      description: "Designed a robust web scraping tool to extract and analyze data from online sources efficiently."
     },
     {
       name: "Orjah",
       tools: ["Django", "Postgres", "Braintree", "Celery", "Redis", "Django REST Framework"],
-      description: "An e-commerce website with integrated payment processing."
+      description: "Engineered a scalable e-commerce platform with integrated payment processing and optimized order management."
     },
     {
       name: "Schoolkia",
       tools: ["Django", "Postgres", "Django REST Framework"],
-      description: "A multi-tenant platform for schools to manage academic records."
+      description: "Developed a multi-tenant academic management system for seamless school record-keeping."
     },
     {
       name: "Researchment",
       tools: ["Django", "Postgres", "Django REST Framework"],
-      description: "A platform for researchers to share their work and collaborate."
+      description: "Built a collaborative research platform enabling seamless document sharing and interaction among researchers."
     }
   ],
   education: [
@@ -113,9 +114,9 @@ const context = {
       duration: "January 2023 - March 2024"
     },
     {
-      degree: "Mechatronics Engineering",
-      institution: "Federal University of Agriculture Abeokuta",
-      duration: "January 2021 - 2024"
+      degree: "Electronics and Computer Engineering",
+      institution: "University of Nigeria, Nsukka",
+      duration: "December 2024 - 2029"
     }
   ]
 };
@@ -137,13 +138,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
 
     const data = await response.json();
-    // console.log('Gemini API response:', data);
 
-    if (data.candidates && data.candidates[0] && data.candidates[0].content) {
+    if (data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts && data.candidates[0].content.parts[0]) {
       res.status(200).json({ answer: data.candidates[0].content.parts[0].text });
-      console.log('Gemini API response:', data.candidates[0].content.parts[0].text);
     } else {
-      res.status(500).json({ error: 'Invalid response from API' });
+      res.status(500).json({ error: 'Invalid response from API', details: data });
     }
   } catch (error) {
     console.error('Error:', error);
