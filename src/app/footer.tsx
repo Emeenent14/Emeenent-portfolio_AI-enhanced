@@ -7,7 +7,7 @@ export default function Footer() {
         <footer className="row-start-3 text-xl flex gap-6 flex-wrap items-center justify-center py-4 bg-black text-white">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="mailto:dtenny95@gmail.com"
+          href="mailto:emeenent14@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -16,7 +16,7 @@ export default function Footer() {
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://wa.me/9124665596"
+          href="https://wa.me/07069273822"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -25,7 +25,7 @@ export default function Footer() {
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://linkedin.com/in/daniel-akinrotimi-firebc"
+          href="https://www.linkedin.com/in/chukwuemeka-franklin-54a02334b/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -33,7 +33,7 @@ export default function Footer() {
           
         </a>
 
-        <a className="flex items-center gap-2 hover:underline hover:underline-offset-4" href="https://github.com/firebreather-heart" target="_blank" rel="noopener noreferrer">
+        <a className="flex items-center gap-2 hover:underline hover:underline-offset-4" href="https://github.com/Emeenent14" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithub} />
           
         </a>
